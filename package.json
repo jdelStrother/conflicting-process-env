@@ -1,0 +1,36 @@
+{
+  "name": "stories-process-env",
+  "version": "1.0.0",
+  "description": "storybook process.env warning",
+  "private": true,
+  "main": "server.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "scripts": {
+    "stories": "start-storybook -p 9001",
+    "smoke": "start-storybook --smoke-test"
+  },
+  "author": "Jonathan del Strother",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.3.0-beta.10",
+    "@storybook/addon-essentials": "^6.3.0-beta.10",
+    "@storybook/addon-links": "^6.3.0-beta.10",
+    "@storybook/addon-storyshots": "^6.3.0-beta.10",
+    "@storybook/builder-webpack5": "^6.3.0-beta.10",
+    "@storybook/core": "^6.3.0-beta.10",
+    "@storybook/manager-webpack5": "^6.3.0-beta.10",
+    "@storybook/react": "^6.3.0-beta.10",
+    "@storybook/theming": "^6.3.0-beta.10",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "root": true,
+
+  "extends": [
+    "plugin:prettier/recommended",
+    "plugin:jest/recommended"
+    // "plugin:@typescript-eslint/recommended"
+  ],
+
+  "globals": {
+    "__webpack_public_path__": true,
+    "__webpack_nonce__": true,
+    "__webpack_require__": true,
+    "__webpack_chunk_load__": true,
+    "__DEV__": false,
+    "fetch": false,
+    "document": false,
+    "navigator": false,
+    "window": false,
+    "requestAnimationFrame": false,
+    "cancelAnimationFrame": false
+  },
+
+  "env": {
+    "es6": true,
+    "node": true
+  },
+
+  "plugins": ["@typescript-eslint", "react", "react-hooks"],
+
+  "parser": "@typescript-eslint/parser",
+
+  "rules": {
+    // "no-use-before-define": [2, "nofunc"],
+
+    "valid-jsdoc": [2, { "requireParamDescription": false }],
+
+    "no-restricted-globals": [2, "event"],
+
+    "accessor-pairs": "error",
+    // Disabling camelcase in favour of @typescript/naming-convention
+    "camelcase": ["error", { "properties": "never" }],
+    "comma-style": ["error", "last"],
+    "constructor-super": "error",
+    "dot-location": ["error", "property"],
+    "eol-last": "error",
+    "eqeqeq": ["error", "always", { "null": "ignore" }],
+    "handle-callback-err": ["error", "^(err|error)$"],
+    "new-cap": ["error", { "newIsCap": true, "capIsNew": false }],
+    "new-parens": "error",
+    "no-array-constructor": "error",
+    "no-caller": "error",
+    "no-class-assign": "error",
+    "no-compare-neg-zero": "error",
+    "no-cond-assign": "error",
+    "no-const-assign": "error",
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "no-control-regex": "error",
+    "no-debugger": "error",
+    "no-delete-var": "error",
+    "no-dupe-args": "error",
+    "no-dupe-class-members": "error",
+    "no-dupe-keys": "error",
+    "no-duplicate-case": "error",
+    "no-empty-character-class": "error",
+    "no-empty-pattern": "error",
+    "no-eval": "error",
+    "no-ex-assign": "error",
+    "no-extend-native": "error",
+    "no-extra-bind": "error",
+    "no-extra-boolean-cast": "error",
+    "no-extra-parens": ["error", "functions"],
+    "no-fallthrough": "error",
+    "no-floating-decimal": "error",
+    "no-func-assign": "error",
+    "no-global-assign": "error",
+    "no-implied-eval": "error",
+    "no-inner-declarations": ["error", "functions"],
+    "no-invalid-regexp": "error",
+    "no-iterator": "error",
+    "no-label-var": "error",
+    "no-labels": ["error", { "allowLoop": false, "allowSwitch": false }],
+    "no-lone-blocks": "error",
+    "no-mixed-operators": [
+      "error",
+      {
+        "groups": [
+          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+          ["&&", "||"],
+          ["in", "instanceof"]
+        ],
+        "allowSamePrecedence": true
+      }
+    ],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-multi-str": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+    "no-negated-in-lhs": "error",
+    "no-new": "error",
+    "no-new-func": "error",
+    "no-new-object": "error",
+    "no-new-require": "error",
+    "no-new-symbol": "error",
+    "no-new-wrappers": "error",
+    "no-obj-calls": "error",
+    "no-octal": "error",
+    "no-octal-escape": "error",
+    "no-path-concat": "error",
+    "no-proto": "error",
+    "no-redeclare": "error",
+    "no-regex-spaces": "error",
+    "no-return-assign": ["error", "except-parens"],
+    "no-return-await": "error",
+    "no-self-assign": "error",
+    "no-self-compare": "error",
+    "no-sequences": "error",
+    "no-shadow-restricted-names": "error",
+    "no-sparse-arrays": "error",
+    "no-tabs": "error",
+    "no-template-curly-in-string": "error",
+    "no-this-before-super": "error",
+    "no-throw-literal": "error",
+    "no-trailing-spaces": "error",
+    "no-undef": "error",
+
+    "no-undef-init": "error",
+    "no-unmodified-loop-condition": "error",
+    "no-unneeded-ternary": ["error", { "defaultAssignment": false }],
+    "no-unreachable": "error",
+    "no-unsafe-finally": "error",
+    "no-unsafe-negation": "error",
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true,
+        "allowTaggedTemplates": true
+      }
+    ],
+
+    "no-use-before-define": [
+      "error",
+      { "functions": false, "classes": false, "variables": false }
+    ],
+    "no-useless-call": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-constructor": "error",
+    "no-useless-escape": "error",
+    "no-useless-rename": "error",
+    "no-useless-return": "error",
+    "no-with": "error",
+    "object-property-newline": [
+      "error",
+      { "allowMultiplePropertiesPerLine": true }
+    ],
+    "one-var": ["error", { "initialized": "never" }],
+    "prefer-promise-reject-errors": "error",
+    "require-await": "error",
+    "symbol-description": "error",
+    "unicode-bom": ["error", "never"],
+    "use-isnan": "error",
+    "valid-typeof": ["error", { "requireStringLiterals": true }],
+    "wrap-iife": ["error", "any", { "functionPrototypeMethods": true }],
+    "yoda": ["error", "never"],
+
+    "react/jsx-boolean-value": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-undef": "error",
+    "react/jsx-uses-vars": "error",
+    "react/self-closing-comp": "error",
+
+    // not needed with the __jsx transform
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+
+    // Enforce camelcase, but allow any property names.
+    // (I'd prefer to tighten this up and only allow snakeCase/camel_case properties, but there's a few errors to fix first)
+    "@typescript-eslint/naming-convention": [
+      "error",
+      { "selector": "property", "format": null }
+    ],
+
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      { "functions": false, "classes": false, "variables": false }
+    ],
+
+    "@typescript-eslint/no-redeclare": "error",
+
+    "no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "args": "none",
+        "ignoreRestSiblings": true,
+        "varsIgnorePattern": "^_"
+      }
+    ]
+  },
+
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "rules": {
+        // Otherwise eslint warns about property names in types, where we often need snake_case to match the API responses.
+        "camelcase": ["off"],
+        // Otherwise eslint warns about, eg, `let f: File = ...`, where File is not defined.
+        // Typescript covers this anyway.
+        "no-undef": ["off"],
+        // Typescript has an alternate version of this rule, the built-in one is pretty broken with .ts files.
+        "no-use-before-define": ["off"],
+        // The built-in no-reclare complaints about redeclaring type overloads
+        "no-redeclare": ["off"],
+
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "vars": "all",
+            "args": "none",
+            "ignoreRestSiblings": true,
+            "varsIgnorePattern": "^_"
+          }
+        ]
+      }
+    }
+  ]
+}
+
+// vim: set ft=javascript
